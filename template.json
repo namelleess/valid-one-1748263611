@@ -1,0 +1,177 @@
+{
+  "sections": [
+    {
+      "id": "header",
+      "name": "Header",
+      "fields": [
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "image",
+          "default": "http://localhost:3000/img.phg"
+        },
+        {
+          "id": "navigation",
+          "name": "Navigation",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "label",
+                "name": "Label",
+                "type": "text",
+                "default": "None"
+              },
+              { "id": "url", "name": "URL", "type": "text", "default": "#" }
+            ]
+          },
+          "default": [
+            { "label": "Home", "url": "/" },
+            { "label": "About", "url": "/about" },
+            { "label": "Contact", "url": "/contact" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "default": "Welcome to Our Website"
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "textarea",
+          "default": "We provide the best services for your needs"
+        },
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "type": "image",
+          "default": "http://localhost:3000/img.phg"
+        },
+        {
+          "id": "cta",
+          "name": "Call to Action",
+          "type": "object",
+          "fields": [
+            {
+              "id": "text",
+              "name": "Button Text",
+              "type": "text",
+              "default": "Get Started"
+            },
+            {
+              "id": "url",
+              "name": "Button URL",
+              "type": "text",
+              "default": "#contact"
+            },
+            {
+              "id": "style",
+              "name": "Button Style",
+              "type": "select",
+              "options": [
+                { "value": "primary", "label": "Primary" },
+                { "value": "secondary", "label": "Secondary" },
+                { "value": "outline", "label": "Outline" }
+              ],
+              "default": "primary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "name": "Features",
+      "fields": [
+        {
+          "id": "sectionTitle",
+          "name": "Section Title",
+          "type": "text",
+          "default": "Our Features"
+        },
+        {
+          "id": "items",
+          "name": "Feature Items",
+          "type": "array",
+          "itemType": {
+            "type": "object",
+            "fields": [
+              {
+                "id": "icon",
+                "name": "Icon",
+                "type": "image",
+                "default": "http://localhost:3000/img.phg"
+              },
+              {
+                "id": "title",
+                "name": "Title",
+                "type": "text",
+                "default": "gere"
+              },
+              {
+                "id": "description",
+                "name": "Description",
+                "type": "textarea",
+                "default": "here"
+              }
+            ]
+          },
+          "default": [
+            {
+              "icon": "http://localhost:3000/img.phg",
+              "title": "Lightning Fast",
+              "description": "Our solution is optimized for speed and performance."
+            },
+            {
+              "icon": "http://localhost:3000/img.phg",
+              "title": "Secure",
+              "description": "Your data is always protected with enterprise-grade security."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "placeholders": {
+    "https://api.adkey-seo.com/api/website/get-website/{{seoId}}": {
+      "id": "demo-site",
+      "name": "Demo Website",
+      "domain": "example.com",
+      "settings": {
+        "primaryColor": "#3366FF",
+        "language": "en"
+      }
+    },
+    "https://api.adkey-seo.com/api/content/get-pages/{{seoId}}": [
+      {
+        "id": "home",
+        "title": "Home",
+        "slug": "/"
+      },
+      {
+        "id": "about",
+        "title": "About Us",
+        "slug": "/about"
+      },
+      {
+        "id": "services",
+        "title": "Services",
+        "slug": "/services"
+      },
+      {
+        "id": "contact",
+        "title": "Contact",
+        "slug": "/contact"
+      }
+    ]
+  }
+}
